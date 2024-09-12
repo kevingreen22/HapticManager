@@ -10,10 +10,10 @@ import CoreHaptics
 @available(iOS 14.0, *)
 public class HapticManager {
     
-    static let instance = HapticManager()
+    public static let instance = HapticManager()
         
     /// Checks if the device supports haptics.
-    var isSupported: Bool {
+    public var isSupported: Bool {
         let hapticCapability = CHHapticEngine.capabilitiesForHardware()
         return hapticCapability.supportsHaptics
     }
@@ -28,7 +28,7 @@ public class HapticManager {
     ///         HapticManager.instance.feedback(.warning)
     ///     }
     /// ```
-    func feedback(_ type: UINotificationFeedbackGenerator.FeedbackType) {
+    public func feedback(_ type: UINotificationFeedbackGenerator.FeedbackType) {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(type)
     }
@@ -43,7 +43,7 @@ public class HapticManager {
     ///         HapticManager.instance.feedback(.warning)
     ///     }
     /// ```
-    func impact(_ style: UIImpactFeedbackGenerator.FeedbackStyle, intensity: CGFloat? = nil) {
+    public func impact(_ style: UIImpactFeedbackGenerator.FeedbackStyle, intensity: CGFloat? = nil) {
         let generator = UIImpactFeedbackGenerator(style: style)
         intensity != nil ? generator.impactOccurred(intensity: intensity!) : generator.impactOccurred()
     }
