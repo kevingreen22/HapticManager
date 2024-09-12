@@ -54,7 +54,7 @@ public class HapticManager {
 @available(iOS 14.0, *)
 public extension View {
     
-    /// A pre-iOS 17 "notification" haptic feedback view modifier that triggers whith the passed in trigger argument and condition.
+    /// A pre-iOS 17 "notification" haptic feedback view modifier that triggers with the passed in trigger argument and condition.
     /// - Parameters:
     ///   - style: The style of the generator feedback.
     ///   - trigger: The value in which triggers the feedback to play.
@@ -83,7 +83,7 @@ public extension View {
         }
     }
     
-    /// A pre-iOS 17 "impact" haptic feedback view modifier that triggers whith the passed in trigger argument and condition.
+    /// A pre-iOS 17 "impact" haptic feedback view modifier that triggers with the passed in trigger argument and condition.
     /// - Parameters:
     ///   - style: The style of the generator feedback.
     ///   - intensity: An optional intensity value for the feedback.
